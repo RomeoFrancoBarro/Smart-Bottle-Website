@@ -87,7 +87,7 @@ const CodeCardsContainer = () => {
                 {/* /Metric Card */}
             </div>
 
-            <div className="w-full md:w-4/12 p-3 pr-6 pl-6 mt-4 pb-36">
+            <div className="w-full md:w-4/12 p-3 pr-6 pl-6 mt-4 pb-44">
                 {/* Metric Card */}
                 <div className="flex justify-center">
                     <button className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-2 pl-5 pr-5 hover:brightness-75" onClick={generateRandomNumbers}>
