@@ -18,6 +18,13 @@ const MetricCardsContainer = () => {
                 let data = childSnapshot.val();
                 records.push({ "key": keyName, "data": data });
             });
+
+            // Custom sorting to ensure "COEng" is at the top
+            records.sort((a, b) => {
+                if (a.key === "COEng") return -1;
+                if (b.key === "COEng") return 1;
+                return 0;
+            });
     
             setTableData(records);
         });
@@ -28,9 +35,9 @@ const MetricCardsContainer = () => {
             {tableData.map((row, index) => (
                 <React.Fragment key={index}>
                     {row.key === "COEng" && (
-                        <div className="w-full md:w-1/2 p-6" key={index}>
+                        <div className="w-full md:w-1/2 p-2 pr-6 pl-6 md:p-8" key={index}>
                             {/* Metric Card */}
-                            <div className="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-8 ">
+                            <div className="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-4 md:p-8">
                                 <div className="flex flex-row items-center">
                                     <div className="flex-shrink pr-4">
                                         <div className="rounded-full p-5 bg-green-600">
@@ -48,9 +55,9 @@ const MetricCardsContainer = () => {
                     )}
                     
                     {row.key === "COE" && (
-                        <div className="w-full md:w-1/2 p-6">
+                        <div className="w-full md:w-1/2 p-2 pr-6 pl-6 md:p-8">
                             {/* Metric Card */}
-                            <div className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-8 ">
+                            <div className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-4 md:p-8">
                                 <div className="flex flex-row items-center">
                                     <div className="flex-shrink pr-4">
                                         <div className="rounded-full p-5 bg-pink-600">
@@ -68,9 +75,9 @@ const MetricCardsContainer = () => {
                     )}
                     
                     {row.key === "COS" && (
-                        <div className="w-full md:w-1/2 p-6">
+                        <div className="w-full md:w-1/2 p-2 pr-6 pl-6 md:p-8">
                             {/* Metric Card */}
-                            <div className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-8">
+                            <div className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-600 rounded-lg shadow-xl p-4 md:p-8">
                                 <div className="flex flex-row items-center">
                                     <div className="flex-shrink pr-4">
                                         <div className="rounded-full p-5 bg-yellow-600">
@@ -88,12 +95,12 @@ const MetricCardsContainer = () => {
                     )}
 
                     {row.key === "CIT" && (
-                        <div className="w-full md:w-1/2 p-6">
+                        <div className="w-full md:w-1/2 p-2 pr-6 pl-6 md:p-8">
                             {/* Metric Card */}
-                            <div className="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-8">
+                            <div className="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-4 md:p-8">
                                 <div className="flex flex-row items-center">
                                     <div className="flex-shrink pr-4">
-                                        <div className="rounded-full p-5 bg-indigo-600">
+                                        <div className="rounded-full p-3 md:p-5 bg-indigo-600">
                                             <i className="fas fa-gears fa-2x fa-inverse"></i>
                                         </div>
                                     </div>

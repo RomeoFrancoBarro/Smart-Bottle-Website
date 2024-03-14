@@ -70,27 +70,27 @@ const ACodeCardsContainer = () => {
     return (
         <>
             {/* COEng Code Section */}
-            <div className="w-full md:w-5/12 p-4 md:p-6">
-                <div className="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-500 rounded-lg shadow-xl p-8 md:p-14">
+            <div className="w-full md:w-5/12 p-3 pr-6 pl-6 md:p-6">
+                <div className="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-500 rounded-lg shadow-xl p-4 md:p-10">
                     <div className="flex flex-row items-center">
                         <div className="flex-shrink pr-2 md:pr-4">
                             <div className="rounded-full p-3 md:p-5 bg-green-600">
                                 <i className="fa fa-lock fa-2x fa-inverse"></i>
                             </div>
                         </div>
-                        <div className="flex-1 text-center md:text-right">
-                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">COEng Code </p>
+                        <div className="flex-1 text-center pr-6 pl-6">
+                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">COEng</p>
                             <p className="font-bold text-xl md:text-3xl md:pr-4">{COEngCode}</p> 
                         </div>
                         <div className="flex justify-center">
-                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-2 md:p-4 pl-4 md:pl-8 pr-4 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('COEng')}>
+                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-1 pl-2 pr-2 md:p-4  md:pl-8 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('COEng')}>
                                 <div className="flex flex-row items-center">
-                                    <div className="flex-shrink pr-2">
+                                    <div className="flex-shrink">
                                         <div className="rounded-full p-2 md:p-3 bg-yellow-600">
                                             <i className="fas fa-exchange-alt fa-lg fa-inverse"></i>
                                         </div>
                                     </div>
-                                    <div className="flex-1 text-center md:text-right">
+                                    <div className="flex-1 text-center md:text-right pl-2">
                                         <p className="font-bold text-lg md:text-2xl">Change Code </p>
                                     </div>
                                 </div>
@@ -101,27 +101,27 @@ const ACodeCardsContainer = () => {
             </div>
 
             {/* COE Code Section */}
-            <div className="w-full md:w-5/12 p-4 md:p-6">
-                <div className="bg-gradient-to-b from-blue-200 to-blue-100 border-b-4 border-blue-500 rounded-lg shadow-xl p-8 md:p-14">
+            <div className="w-full md:w-5/12 p-3 pr-6 pl-6 md:p-6">
+                <div className="bg-gradient-to-b from-blue-200 to-blue-100 border-b-4 border-blue-500 rounded-lg shadow-xl p-4 md:p-10">
                     <div className="flex flex-row items-center">
                         <div className="flex-shrink pr-2 md:pr-4">
                             <div className="rounded-full p-3 md:p-5 bg-blue-600">
                                 <i className="fa fa-lock fa-2x fa-inverse"></i>
                             </div>
                         </div>
-                        <div className="flex-1 text-center md:text-right">
-                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">COE Code </p>
+                        <div className="flex-1 text-center  pr-6 pl-6">
+                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">COE</p>
                             <p className="font-bold text-xl md:text-3xl md:pr-4">{COECode}</p> 
                         </div>
                         <div className="flex justify-center">
-                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-2 md:p-4 pl-4 md:pl-8 pr-4 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('COE')}>
+                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-1 pl-2 pr-2 md:p-4  md:pl-8 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('COE')}>
                                 <div className="flex flex-row items-center">
-                                    <div className="flex-shrink pr-2">
+                                    <div className="flex-shrink">
                                         <div className="rounded-full p-2 md:p-3 bg-yellow-600">
                                             <i className="fas fa-exchange-alt fa-lg fa-inverse"></i>
                                         </div>
                                     </div>
-                                    <div className="flex-1 text-center md:text-right">
+                                    <div className="flex-1 text-center md:text-right pl-2">
                                         <p className="font-bold text-lg md:text-2xl">Change Code </p>
                                     </div>
                                 </div>
@@ -132,28 +132,28 @@ const ACodeCardsContainer = () => {
             </div>
 
             {/* COS Code Section */}
-            <div className="w-full md:w-5/12 p-4 md:p-6">
-                <div className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-8 md:p-14">
+            <div className="w-full md:w-5/12 p-3 pr-6 pl-6 md:p-6">
+                <div className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-4 md:p-10">
                     <div className="flex flex-row items-center">
                         <div className="flex-shrink pr-2 md:pr-4">
                             <div className="rounded-full p-3 md:p-5 bg-pink-600">
                                 <i className="fa fa-lock fa-2x fa-inverse"></i>
                             </div>
                         </div>
-                        <div className="flex-1 text-center md:text-right">
-                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">COS Code </p>
+                        <div className="flex-1 text-center pr-6 pl-6">
+                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">COS</p>
                             <p className="font-bold text-xl md:text-3xl md:pr-4">{COSCode}</p> 
                         </div>
                         <div className="flex justify-center">
-                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-2 md:p-4 pl-4 md:pl-8 pr-4 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('COS')}>
+                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-1 pl-2 pr-2 md:p-4 md:pl-8 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('COS')}>
                                 <div className="flex flex-row items-center">
-                                    <div className="flex-shrink pr-2">
+                                    <div className="flex-shrink">
                                         <div className="rounded-full p-2 md:p-3 bg-yellow-600">
                                             <i className="fas fa-exchange-alt fa-lg fa-inverse"></i>
                                         </div>
                                     </div>
-                                    <div className="flex-1 text-center md:text-right">
-                                        <p className="font-bold text-lg md:text-2xl">Change Code </p>
+                                    <div className="flex-1 text-center md:text-right pl-2">
+                                        <p className="font-bold text-lg md:text-2xl">Change Code</p>
                                     </div>
                                 </div>
                             </button>
@@ -163,27 +163,27 @@ const ACodeCardsContainer = () => {
             </div>
 
             {/* CIT Code Section */}
-            <div className="w-full md:w-5/12 p-4 md:p-6">
-                <div className="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-8 md:p-14">
+            <div className="w-full md:w-5/12 p-3 pr-6 pl-6 md:p-6">
+                <div className="bg-gradient-to-b from-indigo-200 to-indigo-100 border-b-4 border-indigo-500 rounded-lg shadow-xl p-4 md:p-10">
                     <div className="flex flex-row items-center">
                         <div className="flex-shrink pr-2 md:pr-4">
                             <div className="rounded-full p-3 md:p-5 bg-indigo-600">
                                 <i className="fa fa-lock fa-2x fa-inverse"></i>
                             </div>
                         </div>
-                        <div className="flex-1 text-center md:text-right">
-                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">CIT Code </p>
+                        <div className="flex-1 text-center pr-6 pl-6">
+                            <p className="font-medium text-lg md:text-2xl mb-2 md:mb-4 md:pr-4">CIT</p>
                             <p className="font-bold text-xl md:text-3xl md:pr-4">{CITCode}</p> 
                         </div>
                         <div className="flex justify-center">
-                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-2 md:p-4 pl-4 md:pl-8 pr-4 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('CIT')}>
+                            <button className="bg-gradient-to-b from-yellow-200 to-yellow-100 border-b-4 border-yellow-500 rounded-lg shadow-xl p-1 pl-2 pr-2 md:p-4 md:pl-8 md:pr-8 hover:brightness-75" onClick={() => generateRandomNumber('CIT')}>
                                 <div className="flex flex-row items-center">
-                                    <div className="flex-shrink pr-2">
+                                    <div className="flex-shrink">
                                         <div className="rounded-full p-2 md:p-3 bg-yellow-600">
                                             <i className="fas fa-exchange-alt fa-lg fa-inverse"></i>
                                         </div>
                                     </div>
-                                    <div className="flex-1 text-center md:text-right">
+                                    <div className="flex-1 text-center md:text-right pl-2 ">
                                         <p className="font-bold text-lg md:text-2xl">Change Code </p>
                                     </div>
                                 </div>

@@ -84,13 +84,13 @@ const Nav = () => {
                     </a>
                 </div>
 
-                <div className="flex flex-1 md:w-1/3 justify-center md:justify-end text-white px-2">
+                <div className="flex flex-1 w-full md:w-1/3 justify-center md:justify-end text-white px-2">
                     <span className="relative w-full"></span>
                 </div>
-
-                <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
-                    <ul className="list-reset flex justify-between flex-1 md:flex-none items-center">
-                        <li className="flex-1 md:flex-none md:mr-3">
+                <div className="flex w-5/14 pt-2 content-center justify-between md:w-1/3 md:justify-end">
+                {/*<div className="flex w-full pl-72 pt-2 content-center justify-between md:w-1/3 md:justify-end">*/}
+                    <ul className="list-reset flex justify-between flex-1 md:flex-none items-center ">
+                        <li className="flex-1 md:flex-none md:mr-3 ">
                             <div className="relative inline-block">
                                 <button onClick={toggleDropdown} className="drop-button text-white py-2 px-2 flex items-center whitespace-nowrap">
                                     <span className="pr-2"><i className="fas fa-user pl-3 pr-2"></i></span>
@@ -100,7 +100,7 @@ const Nav = () => {
                                     </svg>
                                 </button>
 
-                                <div id="myDropdown" className={`dropdownlist absolute bg-gray-800 text-white right-0 mt-3 p-3 overflow-auto ${dropdownVisible ? 'visible' : 'invisible'}`}>
+                                <div id="myDropdown" className={`dropdownlist absolute bg-gray-800 text-white right-0  p-3 overflow-auto ${dropdownVisible ? 'visible' : 'invisible'}`}>
                                     <div className="border border-gray-800"></div>
                                     
                                     <Link to="/" className="p-2 hover:bg-gray-800 text-white text-sm no-underline hover:no-underline block">
