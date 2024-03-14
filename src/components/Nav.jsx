@@ -87,8 +87,8 @@ const Nav = () => {
                 <div className="flex flex-1 w-full md:w-1/3 justify-center md:justify-end text-white px-2">
                     <span className="relative w-full"></span>
                 </div>
-                <div className="flex w-5/14 pt-2 content-center justify-between md:w-1/3 md:justify-end">
-                {/*<div className="flex w-full pl-72 pt-2 content-center justify-between md:w-1/3 md:justify-end">*/}
+                
+                <div className="flex w-full pt-2 content-center justify-between md:w-1/3 md:justify-end">
                     <ul className="list-reset flex justify-between flex-1 md:flex-none items-center ">
                         <li className="flex-1 md:flex-none md:mr-3 ">
                             <div className="relative inline-block">
