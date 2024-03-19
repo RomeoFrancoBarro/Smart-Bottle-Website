@@ -29,10 +29,14 @@ const Nav = () => {
                         const bottleData = childSnapshot.val();
                         if (bottleData && bottleData.code === userCode) {
                             parent = { name: childSnapshot.key };
+
+                            localStorage.setItem('parent', parent.name);
                         }
                     });
                     if (parent) {
                         console.log("Parent found:", parent);
+
+                        
                     } else {
                         console.log("No parent found for the user code:", userCode);
                     }
@@ -72,6 +76,7 @@ const Nav = () => {
     const handleLogout = () => {
         localStorage.removeItem('token');
         localStorage.removeItem('user');
+        localStorage.removeItem('parent');
     };
 
     return (

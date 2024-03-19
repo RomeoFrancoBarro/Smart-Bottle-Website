@@ -101,10 +101,10 @@ const Login = () => {
                 className="bg-gray-600 border border-gray-500 text-sm placeholder-gray-400 text-white rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5"
                 placeholder="Enter code"
                 value={code}
-                maxLength={5} // Increased maxLength to 5 to allow for "98765"
+                maxLength={4} // Increased maxLength to 5 to allow for "98765"
                 onChange={(e) => {
                     const numericValue = e.target.value.replace(/\D/g, ''); // Remove non-numeric characters
-                    if (numericValue === '98765' && numericValue.length === 5) {
+                    if (numericValue === '1111') {
                     setCode(numericValue); // Set the state to "98765" if entered completely
                     
                     } else {

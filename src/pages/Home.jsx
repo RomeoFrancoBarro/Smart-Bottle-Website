@@ -7,8 +7,8 @@ import LeaderboardCardsContainer from '../components/LeaderboardCardsContainer';
 import CodeCardsContainer from '../components/CodeCardsContainer';
 import LevelCardsContainer from '../components/LevelCardsContainer';
 import ACodeCardsContainer from '../components/ACodeCardsContainer';
-
-
+import ATableCardsContainer from '../components/ATableCardsContainer';
+import TableCardsContainer from '../components/TableCardsContainer';
 
 
 const MyComponent = () => {
@@ -18,6 +18,7 @@ const MyComponent = () => {
     const [showCodeSection, setShowCodeSection] = useState(false);
     const [showLevelSection, setShowLevelSection] = useState(false);
     const [showACodeSection, setShowACodeSection] = useState(false);
+    const [showTableSection, setShowTableSection] = useState(false);
 
     const [localStorageUser, setLocalStorageUser] = useState('');
 
@@ -27,6 +28,7 @@ const MyComponent = () => {
         setShowCodeSection(false);
         setShowLevelSection(false);
         setShowACodeSection(false);
+        setShowTableSection(false);
     };
 
     const toggleLeaderboardSection = () => {
@@ -35,6 +37,7 @@ const MyComponent = () => {
         setShowCodeSection(false);
         setShowLevelSection(false);
         setShowACodeSection(false);
+        setShowTableSection(false);
     };
 
     const toggleCodeSection = () => {
@@ -43,6 +46,7 @@ const MyComponent = () => {
       setShowCodeSection(true);
       setShowLevelSection(false);
       setShowACodeSection(false);
+      setShowTableSection(false);
     };
 
     const toggleLevelSection = () => {
@@ -51,6 +55,7 @@ const MyComponent = () => {
       setShowCodeSection(false);
       setShowLevelSection(true);
       setShowACodeSection(false);
+      setShowTableSection(false);
     };
 
     const toggleACodeSection = () => {
@@ -59,6 +64,16 @@ const MyComponent = () => {
         setShowCodeSection(false);
         setShowLevelSection(false);
         setShowACodeSection(true);
+        setShowTableSection(false);
+    };
+
+    const toggleTableSection = () => {
+        setShowPointsSection(false);
+        setShowLeaderboardSection(false);
+        setShowCodeSection(false);
+        setShowLevelSection(false);
+        setShowACodeSection(false);
+        setShowTableSection(true);
     };
 
     useEffect(() => {
@@ -85,39 +100,52 @@ const MyComponent = () => {
 
                                 
                                     <li className={`mr-3 flex-1 ${showPointsSection ? 'active' : ''}`}> 
-                                        <a href="#" onClick={togglePointsSection} className={`block py-1 md:py-3 pl-1 align-middle text-white no-underline hover:text-blue-600 border-b-2 ${showPointsSection ? 'border-blue-600 text-blue-600' : 'border-gray-800 hover:border-blue-600 text-gray-400 md:text-gray-200'}`}>
-                                            <i className="fas fa-star pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-white md:text-white block md:inline-block">Points</span>
+                                        <a href="#" onClick={togglePointsSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-blue-600 border-b-2 ${showPointsSection ? 'border-blue-600 text-blue-600' : 'border-gray-800 hover:border-blue-600 text-gray-400 md:text-gray-200'}`}>
+                                            <i className="fa fa-star pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Points</span>
                                         </a>
                                     </li>
                                 
                                     <li className={`mr-3 flex-1 ${showLeaderboardSection ? 'active' : ''}`}> 
-                                        <a href="#" onClick={toggleLeaderboardSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-red-600 border-b-2 ${showLeaderboardSection ? 'border-red-500 text-red-500' : 'border-gray-800 hover:border-red-500 text-gray-400 md:text-gray-200'}`}>
+                                        <a href="#" onClick={toggleLeaderboardSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-red-600 border-b-2 ${showLeaderboardSection ? 'border-red-600 text-red-600' : 'border-gray-800 hover:border-red-600 text-gray-400 md:text-gray-200'}`}>
                                             <i className="fa fa-trophy pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Leaderboards</span>
                                         </a>
                                     </li>
                                
-                                {localStorageUser !== '98765' && (
+                                {localStorageUser !== '1111' && (
                                     <li className={`mr-3 flex-1 ${showCodeSection ? 'active' : ''}`}> 
                                         <a href="#" onClick={toggleCodeSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-pink-500 border-b-2 ${showCodeSection ? 'border-pink-500 text-pink-500' : 'border-gray-800 hover:border-pink-500 text-gray-400 md:text-gray-200'}`}>
                                             <i className="fa fa-code pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Code</span>
                                         </a>
                                     </li>
                                 )}
-                                {localStorageUser === '98765' && (
+                                {localStorageUser === '1111' && (
                                     <li className={`mr-3 flex-1 ${showLevelSection ? 'active' : ''}`}> 
-                                        <a href="#" onClick={toggleLevelSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-purple-500 border-b-2 ${showLevelSection ? 'border-purple-500 text-purple-500' : 'border-gray-800 hover:border-purple-500 text-gray-400 md:text-gray-200'}`}>
+                                        <a href="#" onClick={toggleLevelSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-purple-600 border-b-2 ${showLevelSection ? 'border-purple-600 text-purple-600' : 'border-gray-800 hover:border-purple-600 text-gray-400 md:text-gray-200'}`}>
                                             <i className="fa fa-trash pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Level</span>
                                         </a>
                                     </li>
                                 )}
-                                {localStorageUser === '98765' && (
+                                {localStorageUser === '1111' && (
                                     <li className={`mr-3 flex-1 ${showACodeSection ? 'active' : ''}`}>
                                         <a href="#" onClick={toggleACodeSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-yellow-600 border-b-2 ${showACodeSection ? 'border-yellow-600 text-yellow-600' : 'border-gray-800 hover:border-yellow-600 text-gray-400 md:text-gray-200'}`}>
                                             <i className="fa fa-code pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Admin Codes</span>
                                         </a>
                                     </li>
                                 )}
-
+                                {localStorageUser === '1111' && (
+                                    <li className={`mr-3 flex-1 ${showTableSection ? 'active' : ''}`}>
+                                        <a href="#" onClick={toggleTableSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-green-600 border-b-2 ${showTableSection ? 'border-green-600 text-green-600' : 'border-gray-800 hover:border-green-600 text-gray-400 md:text-gray-200'}`}>
+                                            <i className="fa fa-clock-rotate-left pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">History</span>
+                                        </a>
+                                    </li>
+                                )}
+                                {localStorageUser !== '1111' && (
+                                    <li className={`mr-3 flex-1 ${showTableSection ? 'active' : ''}`}>
+                                        <a href="#" onClick={toggleTableSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-purple-600 border-b-2 ${showTableSection ? 'border-purple-600 text-purple-600' : 'border-gray-800 hover:border-purple-600 text-gray-400 md:text-gray-200'}`}>
+                                            <i className="fa fa-clock-rotate-left pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">History</span>
+                                        </a>
+                                    </li>
+                                )}
                             </ul>
                         </div>
                     </div>
@@ -196,6 +224,36 @@ const MyComponent = () => {
                                 </div>
                             </div>
                         )}
+                        {showTableSection && localStorageUser === '1111' && (
+                            <div id="leaderboardSection" className="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+                                {/* Your Leaderboards Section Content */}
+                                <div className="bg-gray-800 pt-3">
+                                    <div className="rounded-tl-3xl bg-gradient-to-r from-green-500 to-gray-800 p-4 shadow text-2xl text-white ">
+                                        <h1 className="font-bold pl-2">Input History</h1>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap justify-center">
+                                    {/* Metric Cards */}
+                                    <ATableCardsContainer/>
+                                </div>
+                            </div>
+                        )}
+                        {showTableSection && localStorageUser !== '1111' && (
+                            <div id="leaderboardSection" className="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+                                {/* Your Leaderboards Section Content */}
+                                <div className="bg-gray-800 pt-3">
+                                    <div className="rounded-tl-3xl bg-gradient-to-r from-purple-500 to-gray-800 p-4 shadow text-2xl text-white ">
+                                        <h1 className="font-bold pl-2">Input History</h1>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap justify-center">
+                                    {/* Metric Cards */}
+                                    <TableCardsContainer/>
+                                </div>
+                            </div>
+                        )}
+
+
                 </section>
             </div>
         </main>
