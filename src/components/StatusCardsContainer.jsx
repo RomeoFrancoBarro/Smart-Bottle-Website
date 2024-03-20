@@ -28,7 +28,7 @@ const StatusCardsContainer = () => {
             {tableData.map((row, index) => (
                 <React.Fragment key={index}>
                     {row.key === "Status" && (
-                        <div className="w-full md:w-1/2 p-6 pb-52 md:pb-44" key={index}>
+                        <div className="w-full md:w-1/2 p-6 pb-64 md:pb-44" key={index}>
                             {/* Metric Card */}
                             <div className="bg-gradient-to-b from-green-200 to-green-100 border-b-4 border-green-600 rounded-lg shadow-xl p-5 px-8">
                                 <div className="flex flex-row items-center">

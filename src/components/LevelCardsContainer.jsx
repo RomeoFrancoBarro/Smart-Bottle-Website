@@ -52,7 +52,7 @@ const LevelCardsContainer = () => {
                     )}
                     
                     {row.key === "Level" && (
-                        <div className="w-full md:w-1/2 p-6 pb-32">
+                        <div className="w-full md:w-1/2 p-6 pb-24 ">
                             {/* Metric Card */}
                             <div className="bg-gradient-to-b from-pink-200 to-pink-100 border-b-4 border-pink-500 rounded-lg shadow-xl p-8 ">
                                 <div className="flex flex-row items-center">
