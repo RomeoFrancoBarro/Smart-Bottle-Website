@@ -44,7 +44,8 @@ const CodeCardsContainer = () => {
                 const matchingKey = Object.keys(data).find(key => data[key].code === userCode);
                 if (matchingKey) {
                     // If the user code matches, generate a new random code
-                    const newCode = generateRandomCode();
+                    const newCode1 = generateRandomCode();
+                    const newCode = newCode1.toString();
                     // Update the loginCode state
                     setLoginCode(newCode);
                     // Update only the loginCode in the Firebase database

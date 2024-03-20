@@ -61,7 +61,7 @@ const ACodeCardsContainer = () => {
         }
     
         // Update the code in Firebase for the specified codeKey
-        set(ref(db, `Bottle/${codeKey}/code`), newCode)
+        set(ref(db, `Bottle/${codeKey}/code`), newCode.toString())
             .then(() => console.log(`${codeKey} code successfully updated in Firebase:`, newCode))
             .catch((error) => console.error(`Error updating ${codeKey} code in Firebase:`, error));
     };

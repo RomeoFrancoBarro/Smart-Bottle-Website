@@ -9,7 +9,7 @@ import LevelCardsContainer from '../components/LevelCardsContainer';
 import ACodeCardsContainer from '../components/ACodeCardsContainer';
 import ATableCardsContainer from '../components/ATableCardsContainer';
 import TableCardsContainer from '../components/TableCardsContainer';
-
+import StatusCardsContainer from '../components/StatusCardsContainer';
 
 const MyComponent = () => {
     
@@ -19,6 +19,7 @@ const MyComponent = () => {
     const [showLevelSection, setShowLevelSection] = useState(false);
     const [showACodeSection, setShowACodeSection] = useState(false);
     const [showTableSection, setShowTableSection] = useState(false);
+    const [showStatusSection, setShowStatusSection] = useState(false);
 
     const [localStorageUser, setLocalStorageUser] = useState('');
 
@@ -29,6 +30,7 @@ const MyComponent = () => {
         setShowLevelSection(false);
         setShowACodeSection(false);
         setShowTableSection(false);
+        setShowStatusSection(false);
     };
 
     const toggleLeaderboardSection = () => {
@@ -38,6 +40,7 @@ const MyComponent = () => {
         setShowLevelSection(false);
         setShowACodeSection(false);
         setShowTableSection(false);
+        setShowStatusSection(false);
     };
 
     const toggleCodeSection = () => {
@@ -47,6 +50,7 @@ const MyComponent = () => {
       setShowLevelSection(false);
       setShowACodeSection(false);
       setShowTableSection(false);
+      setShowStatusSection(false);
     };
 
     const toggleLevelSection = () => {
@@ -56,6 +60,7 @@ const MyComponent = () => {
       setShowLevelSection(true);
       setShowACodeSection(false);
       setShowTableSection(false);
+      setShowStatusSection(false);
     };
 
     const toggleACodeSection = () => {
@@ -65,6 +70,7 @@ const MyComponent = () => {
         setShowLevelSection(false);
         setShowACodeSection(true);
         setShowTableSection(false);
+        setShowStatusSection(false);
     };
 
     const toggleTableSection = () => {
@@ -74,6 +80,17 @@ const MyComponent = () => {
         setShowLevelSection(false);
         setShowACodeSection(false);
         setShowTableSection(true);
+        setShowStatusSection(false);
+    };
+
+    const toggleStatusSection = () => {
+        setShowPointsSection(false);
+        setShowLeaderboardSection(false);
+        setShowCodeSection(false);
+        setShowLevelSection(false);
+        setShowACodeSection(false);
+        setShowTableSection(false);
+        setShowStatusSection(true);
     };
 
     useEffect(() => {
@@ -143,6 +160,13 @@ const MyComponent = () => {
                                     <li className={`mr-3 flex-1 ${showTableSection ? 'active' : ''}`}>
                                         <a href="#" onClick={toggleTableSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-purple-600 border-b-2 ${showTableSection ? 'border-purple-600 text-purple-600' : 'border-gray-800 hover:border-purple-600 text-gray-400 md:text-gray-200'}`}>
                                             <i className="fa fa-clock-rotate-left pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">History</span>
+                                        </a>
+                                    </li>
+                                )}
+                                {localStorageUser === '1111' && (
+                                    <li className={`mr-3 flex-1 ${showStatusSection ? 'active' : ''}`}>
+                                        <a href="#" onClick={toggleStatusSection} className={`block py-1 md:py-3 pl-0 md:pl-1 align-middle text-white no-underline hover:text-pink-600 border-b-2 ${showStatusSection ? 'border-pink-600 text-pink-600' : 'border-gray-800 hover:border-pink-600 text-gray-400 md:text-gray-200'}`}>
+                                            <i className="fa fa-signal pr-0 md:pr-3"></i><span className="pb-1 md:pb-0 text-xs md:text-base text-gray-400 md:text-gray-200 block md:inline-block">Status</span>
                                         </a>
                                     </li>
                                 )}
@@ -249,6 +273,20 @@ const MyComponent = () => {
                                 <div className="flex flex-wrap justify-center">
                                     {/* Metric Cards */}
                                     <TableCardsContainer/>
+                                </div>
+                            </div>
+                        )}
+                        {showStatusSection && localStorageUser === '1111' && (
+                            <div id="leaderboardSection" className="main-content flex-1 bg-gray-100 mt-12 md:mt-2 pb-24 md:pb-5">
+                                {/* Your Leaderboards Section Content */}
+                                <div className="bg-gray-800 pt-3">
+                                    <div className="rounded-tl-3xl bg-gradient-to-r from-pink-500 to-gray-800 p-4 shadow text-2xl text-white ">
+                                        <h1 className="font-bold pl-2">Device Status</h1>
+                                    </div>
+                                </div>
+                                <div className="flex flex-wrap justify-center">
+                                    {/* Metric Cards */}
+                                    <StatusCardsContainer/>
                                 </div>
                             </div>
                         )}
