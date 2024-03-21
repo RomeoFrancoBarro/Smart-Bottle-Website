@@ -3,7 +3,7 @@ import { ref, get, child } from 'firebase/database';
 import { useNavigate } from 'react-router-dom';
 import StartFirebase from '../firebase';
 
-import customLogo from '../assets/logo.png';
+import customLogo from '../assets/logo1.png';
 
 const db = StartFirebase();
 
@@ -57,12 +57,12 @@ const Login = () => {
   return (
     <div>
       <header>
-        <nav aria-label="menu nav" className="bg-gray-800 pt-2 md:pt-1 pb-1 px-1 mt-0 h-auto fixed w-full z-20 top-0">
+        <nav aria-label="menu nav" className="bg-gray-800 pt-2 md:pt-1 pb-2 px-2 mt-0 h-auto fixed w-full z-20 top-0">
           <div className="flex flex-wrap items-center">
             <div className="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
               <a href="" className="flex items-center space-x-3 rtl:space-x-reverse pl-4">
                 <img src={customLogo} className="h-10" alt="Logo" />
-                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">S.B.T</span>
+                <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Upgrade</span>
               </a>
             </div>
 

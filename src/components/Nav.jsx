@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import '@fortawesome/fontawesome-free/css/all.css';
 import { get, child, ref } from 'firebase/database';
-import customLogo from '../assets/logo.png'; 
+import customLogo from '../assets/logo1.png'; 
 import StartFirebase from '../firebase'; // Import your Firebase configuration
 import { Link } from 'react-router-dom';
 
@@ -85,7 +85,7 @@ const Nav = () => {
                 <div className="flex flex-shrink md:w-1/3 justify-center md:justify-start text-white">
                     <a href="" className="flex items-center space-x-3 rtl:space-x-reverse pl-4">
                         <img src={customLogo} className="h-10" alt="Logo" />
-                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">S.B.T</span>
+                        <span className="self-center text-2xl font-semibold whitespace-nowrap text-white">Upgrade</span>
                     </a>
                 </div>
 
